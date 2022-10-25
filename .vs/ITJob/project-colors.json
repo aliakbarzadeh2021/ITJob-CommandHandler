@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "c1178c2c-d295-4182-bd24-755122ddfe91": {
+      "ProjectGuid": "c1178c2c-d295-4182-bd24-755122ddfe91",
+      "DisplayName": "ITJob.Advertisement.Api.Host",
+      "ColorIndex": 0
+    },
+    "3ad4e4d3-0231-4269-a816-8d736e0b1e0b": {
+      "ProjectGuid": "3ad4e4d3-0231-4269-a816-8d736e0b1e0b",
+      "DisplayName": "ITJob.CommandHandler",
+      "ColorIndex": 1
+    },
+    "78b8a243-be82-4c58-ab6c-77db1f2ed47f": {
+      "ProjectGuid": "78b8a243-be82-4c58-ab6c-77db1f2ed47f",
+      "DisplayName": "ITJob.QueryService.Interface",
+      "ColorIndex": 2
+    },
+    "cb1d9f21-be06-4828-ad7e-010008099691": {
+      "ProjectGuid": "cb1d9f21-be06-4828-ad7e-010008099691",
+      "DisplayName": "ITJob.QueryService.Implement",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}

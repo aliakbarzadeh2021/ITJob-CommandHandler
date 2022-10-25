@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CB1D9F21-BE06-4828-AD7E-010008099691}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ITJob.QueryService.Implement</RootNamespace>
+    <AssemblyName>ITJob.QueryService.Implement</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.2.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.2.0\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.2.0\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Windsor.4.1.0\lib\net45\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="SAF.SSN.Kernel.Infrastructure">
+      <HintPath>..\SAF.SSN.Kernel.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Installer\ActiveMapper.cs" />
+    <Compile Include="Installer\QueryServiceInstaller.cs" />
+    <Compile Include="Modules\AdvertisementModule\Dtos\AdvertisementDto.cs" />
+    <Compile Include="Modules\AdvertisementModule\Mappers\AdvertisementMapper.cs" />
+    <Compile Include="Modules\AdvertisementModule\Mappers\AdvertismentMapperProfile.cs" />
+    <Compile Include="Modules\AdvertisementModule\Services\AdvertisementQueryService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ITJob.Domain\ITJob.Domain.csproj">
+      <Project>{3e5eba0c-e1cf-4442-bd36-89622ac1cbdb}</Project>
+      <Name>ITJob.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITJob.EntityFramework.Read.Implement\ITJob.EntityFramework.Read.Implement.csproj">
+      <Project>{97901f71-7e27-4a88-a754-7613be874132}</Project>
+      <Name>ITJob.EntityFramework.Read.Implement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITJob.EntityFramework.Read\ITJob.EntityFramework.Read.csproj">
+      <Project>{69b4efb1-d479-4b2f-baac-db1b41318f81}</Project>
+      <Name>ITJob.EntityFramework.Read</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITJob.Message.QueryModel\ITJob.Message.QueryModel.csproj">
+      <Project>{d2720864-850b-473a-ae6a-98f924275bce}</Project>
+      <Name>ITJob.Message.QueryModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITJob.QueryService.Interface\ITJob.QueryService.Interface.csproj">
+      <Project>{78b8a243-be82-4c58-ab6c-77db1f2ed47f}</Project>
+      <Name>ITJob.QueryService.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITJob.Repository\ITJob.Repository.csproj">
+      <Project>{222fc03a-3b31-489c-9deb-681295733af4}</Project>
+      <Name>ITJob.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
